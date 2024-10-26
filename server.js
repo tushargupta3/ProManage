@@ -18,7 +18,7 @@ app.use(express.json());
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URL).then (()=>console.log ("Connected to DB")).catch (err => console.log("DB Failed to Connect",err));
 
-app.get("/api/health",(req, res)=>{
+app.get("/",(req, res)=>{
     console.log("Hey Health");
     res.json({
         service:"TaskApp Server",
